@@ -1,0 +1,8 @@
+{
+  "name": "claude-ntfy",
+  "description": "Push notifications via ntfy.sh when Claude Code needs your attention. Includes 5-minute delay debouncing and Remote Control deep-link support.",
+  "version": "1.0.0",
+  "author": {
+    "name": "rce13"
+  }
+}

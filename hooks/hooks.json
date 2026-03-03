@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/scripts/notify.sh\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "SID=$(cat | jq -r '.session_id // \"unknown\"' 2>/dev/null); rm -f \"/tmp/claude-notify-$SID\" 2>/dev/null; true"
+          }
+        ]
+      }
+    ]
+  }
+}
